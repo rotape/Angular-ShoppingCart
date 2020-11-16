@@ -1,0 +1,25 @@
+<div class="countdown">
+  <div class="countdown__title">
+    <ng-content></ng-content>
+  </div>
+  <div class="countdown__timer">
+    <div
+      *ngFor="let time of display; let i = index"
+      class="countdown__date {{ time }}"
+    >
+      <div class="countdown__date--number">
+        {{
+          showZero && displayNumbers[i] < 10
+            ? "0" + displayNumbers[i].trim()
+            : displayNumbers[i]
+        }}
+      </div>
+      <div *ngIf="display[i + 1]" class="countdown__date--divider">
+        {{ divider }}
+      </div>
+      <div class="countdown__date--text">
+        {{ time }}
+      </div>
+    </div>
+  </div>
+</div>

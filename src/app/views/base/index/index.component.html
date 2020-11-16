@@ -1,65 +1,47 @@
 <!-- Carousel -->
 <div class="container">
-  <!--Carousel Wrapper-->
-  <div
-    id="carousel-example-2"
-    class="carousel slide carousel-fade"
-    data-ride="carousel"
-  >
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      <li
-        data-target="#carousel-example-2"
-        data-slide-to="0"
-        class="active"
-      ></li>
-      <li data-target="#carousel-example-2" data-slide-to="1"></li>
-      <li data-target="#carousel-example-2" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-      <div
-        *ngFor="let carouselItem of carouselList; let i = index"
-        class="carousel-item {{ i === 0 ? 'active' : '' }}"
-      >
-        <div class="view">
-          <img
-            class="d-block w-100"
-            [src]="carouselItem.bannerImg"
-            alt="First slide"
-          />
-          <div class="mask rgba-black-light"></div>
-        </div>
-        <div class="carousel-caption">
-          <h3 class="h3-responsive">{{ carouselItem.title }}</h3>
-          <p>{{ carouselItem.description }}</p>
-        </div>
-      </div>
-    </div>
-    <!--/.Slides-->
-    <!--Controls-->
-    <a
-      class="carousel-control-prev"
-      href="#carousel-example-2"
-      role="button"
-      data-slide="prev"
+  <div class="top">
+    <video
+      class="top__gif"
+      autoplay
+      loop
+      muted
+      playsinline
+      src="../../../../assets/img/gif_no_background.mp4"
+    ></video>
+    <app-countdown
+      (reached)="callBack($event)"
+      [text]="text"
+      units=" Days | Hours | Minutes | Seconds"
+      end="July 22, 2022"
+      >Patum 2021</app-countdown
     >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a
-      class="carousel-control-next"
-      href="#carousel-example-2"
-      role="button"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
   </div>
-  <!--/.Carousel Wrapper-->
-  <br />
-  <app-best-product></app-best-product>
+  <div class="center">
+    <div class="center__left">
+      <h3 class="center__left--title3">SAPS D'ON SURT AQUESTA EXPRESSIÓ?</h3>
+      <p class="center__left--text">
+        Aquesta expressió és un fenòmen que forma part de la cultura popular
+        dels carrers de Berga. El seu impulsor és l’Antoni un noi membre de
+        L’E.E.E Llar de Santa Maria de Queralt i que juntament amb la
+        col·laboració de Peu de Roca i Dcbediciones converteixen aquesta
+        expressió en una campanya que intenta aglutinar aquest sentiment
+        col·lectiu d’incertesa davant la celebració de la Patum. Així mateix
+        esdevé un mitjà per a recaptar fons per la incorporació de material
+        tecnològic (tablets i ordinadors) pel taller i escola Coloma.
+      </p>
+    </div>
+    <h2 class="center__right">
+      UNA CAMPANYA PER A RECAPTAR FONS PER INCORPORAR MATERIAL TEUNA CAMPANYA
+      PER A RECAPTAR FONS PER INCORPORAR MATERIAL TECNOLÒGIC ALS ESPAIS DE
+      L’ASSOCIACIÓ COLOMA.S ESPAIS DE L’ASSOCIACIÓ COLOMA.
+    </h2>
+  </div>
+  <div class="banner">
+    <div class="banner__section">
+      <h2>Com puc col·laborar?</h2>
+      <p>Obtenint la samarreta</p>
+      <button class="button__colabora">Vull la samarreta</button>
+    </div>
+  </div>
 </div>
