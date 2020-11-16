@@ -27,7 +27,6 @@ import { ScrollingModule } from "@angular/cdk/scrolling";
 import { CdkTableModule } from "@angular/cdk/table";
 import { CdkTreeModule } from "@angular/cdk/tree";
 import { FireBaseConfig } from "./../../environments/firebase.config";
-import { CountdownComponent } from "./components/countdown/countdown.component";
 
 @NgModule({
   imports: [
@@ -51,7 +50,6 @@ import { CountdownComponent } from "./components/countdown/countdown.component";
     TranslatePipe,
     CardLoaderComponent,
     MomentTimeAgoPipe,
-    CountdownComponent,
   ],
   exports: [
     NoProductsFoundComponent,
@@ -75,7 +73,6 @@ import { CountdownComponent } from "./components/countdown/countdown.component";
     CdkTreeModule,
     DragDropModule,
     ScrollingModule,
-    CountdownComponent,
   ],
   providers: [
     AuthService,
